@@ -47,3 +47,15 @@ if __name__ == '__main__':
         ans = ob.median(matrix, r, c);
         print(ans)
 # } Driver Code Ends
+
+
+"""
+Input:
+R = 3, C = 3
+M = [[1, 3, 5], 
+     [2, 6, 9], 
+     [3, 6, 9]]
+
+Output: 5
+
+"""
