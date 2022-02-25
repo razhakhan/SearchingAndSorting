@@ -14,13 +14,14 @@ class Solution:
             if(ma<arr[-1]):
                 ma=arr[-1]
                 
-        desired=(r*c+1)//2 #if m is median, it'll have n//2 elements on both sides 
+        desired=(r*c)//2 #if m is median, it'll have n//2 elements on both sides 
         
         while(mi<ma):
             mid=mi+(ma-mi)//2
             cnt=0
             for arr in matrix:
                 cnt+=upper_bound(arr, mid)  #the rightmost index where mid can be inserted so that it's always sorted
+            cnt=cnt-1   #bisect gives index to insert, so to count elements before this index, - by 1
             if(cnt<desired):
                 mi=mid+1    #if cnt<desired, median must be greater than the present value, so increase mi
             else:
